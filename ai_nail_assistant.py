@@ -16,7 +16,7 @@ import ast
 # This is the standard "edit" URL of your sheet.
 SHEET_URL = "https://docs.google.com/spreadsheets/d/1IeueIugoP0t2lWnni35rbMfRaFJrQzcax3ffcVW45ik/edit?usp=sharing"
 # --- 2. Local Image Folder Configuration ---
-NAILS_DIR = "renamed_pdf_images"
+NAILS_DIR = "nails"
 
 # ============================
 # Core Logic & Data Loading
@@ -200,4 +200,5 @@ elif st.session_state.page == 'shop':
                                     st.session_state.cart.append(rec.to_dict()); st.rerun()
                             else: st.error(f"Image not found for {rec['ProductID']}")
     else:
+
         st.info("✨ Upload an image of your hand to see personalized nail recommendations.")
