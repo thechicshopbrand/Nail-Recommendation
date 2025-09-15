@@ -190,7 +190,7 @@ elif st.session_state.page == 'shop':
                                 potential_path = os.path.join(NAILS_DIR, rec['ProductID'] + ext)
                                 if os.path.exists(potential_path): image_path = potential_path; break
                             if image_path:
-                                st.image(image_path, use_column_width=True)
+                                st.image(image_path, use_container_width=True)
                                 st.markdown(f"**{rec['ProductName']}**")
                                 st.markdown(f"<p style='font-size: 1.1rem; font-weight: 500; margin: 0;'>₦{rec['Selling Price']:.2f}</p>", unsafe_allow_html=True)
                                 #st.metric(label="Price", value=f"₦{rec['Selling Price']:.2f}")
@@ -202,3 +202,4 @@ elif st.session_state.page == 'shop':
     else:
 
         st.info("✨ Upload an image of your hand to see personalized nail recommendations.")
+
