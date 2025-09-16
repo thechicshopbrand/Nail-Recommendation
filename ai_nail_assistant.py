@@ -174,7 +174,7 @@ elif st.session_state.page == 'shop':
         if products_df is not None:
             style_options = sorted(list(products_df['Style'].unique()))
             selected_styles = st.multiselect("Filter by Style:", options=style_options)
-            recommendations_df = NailRecommender().recommend_top_n(products_df, skin_tone_bgr, nail_shape, n=10, preferred_styles=selected_styles)
+            recommendations_df = NailRecommender().recommend_top_n(products_df, skin_tone_bgr, nail_shape, n=15, preferred_styles=selected_styles)
             if recommendations_df.empty:
                 st.warning("No recommendations match your filters.")
             else:
@@ -200,6 +200,7 @@ elif st.session_state.page == 'shop':
     else:
 
         st.info("✨ Upload an image of your hand to see personalized nail recommendations.")
+
 
 
 
