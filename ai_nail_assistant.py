@@ -38,7 +38,7 @@ def load_product_data_from_gsheet(sheet_url):
         # Filter out any inactive products
         df = df[df['IsActive'] == True].copy()
         
-        st.success("Here is a list of our available products.")
+        st.success("Here are your top matches, selected from our entire product range to suit your style.")
         return df
     except Exception as e:
         st.error(f"Failed to generate product list")
@@ -200,6 +200,7 @@ elif st.session_state.page == 'shop':
     else:
 
         st.info("✨ Upload an image of your hand to see personalized nail recommendations.")
+
 
 
 
