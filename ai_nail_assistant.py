@@ -12,8 +12,6 @@ import ast
 # Configuration - UPDATE THESE PATHS
 # ============================
 
-# --- 1. Google Sheet Configuration ---
-# This is the standard "edit" URL of your sheet.
 SHEET_URL = "https://docs.google.com/spreadsheets/d/130tpSJ_a_aOf2UBNXXlxmcK3bJoycz9x_5clIXwd5sg/edit?usp=sharing"
 # --- 2. Local Image Folder Configuration ---
 NAILS_DIR = "nails"
@@ -202,6 +200,7 @@ elif st.session_state.page == 'shop':
     else:
 
         st.info("✨ Upload an image of your hand to see personalized nail recommendations.")
+
 
 
 
