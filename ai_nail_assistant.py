@@ -125,7 +125,7 @@ if 'page' not in st.session_state: st.session_state.page = 'shop'
 products_df = load_product_data_from_gsheet(SHEET_URL)
 
 with st.sidebar:
-    st.title("💅 AI Nail Stylist")
+    st.title("💅 TheChicShop AI")
     if st.session_state.cart:
         st.subheader("🛒 Your Shopping Cart")
         total_price = sum(item['Selling Price'] for item in st.session_state.cart)
@@ -202,4 +202,5 @@ elif st.session_state.page == 'shop':
     else:
 
         st.info("✨ Upload an image of your hand to see personalized nail recommendations.")
+
 
